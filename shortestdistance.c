@@ -1,3 +1,5 @@
+// needs reference to diagram whose link will be put up in the description of the problem.
+
 #include<stdio.h>
 
 int n,a[20][20],b[20][20],i,j,x,k=0,t,f=0,min;
