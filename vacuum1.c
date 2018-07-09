@@ -15,8 +15,7 @@ int suck() // clears the block of any dirt
 {
  printf("block %d has been detected dirty \n ",j);
  area[j++]=0;
- printf("block %d has been cleaned and now moves right to block %d to
-check for dirtyness \n",j-1,j);
+ printf("block %d has been cleaned and now moves right to block %d to check for dirtyness \n",j-1,j);
 }
 
 void main()
@@ -24,12 +23,9 @@ void main()
  int area[20],i,n;
  printf("enter the number of blocks");
  scanf("%d",&n);
- printf("enter the pattern of dirt to be cleaned , enter 1 for dirt, 0
-for clean \n");
+ printf("enter the pattern of dirt to be cleaned , enter 1 for dirt, 0 for clean \n");
  for(i=1;i<=n;i++)
- {
   scanf("%d",&area[i]);
- }
  while(j<=n)
  {
   if(area[j]==1)
