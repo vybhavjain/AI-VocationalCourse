@@ -1,0 +1,31 @@
+input for shorest distance problem:
+
+Enter number of vertices: 
+7
+Enter the adjacency matrix: 
+0 1 1 1 0 0 0
+1 0 0 0 0 0 1
+1 0 0 0 1 1 1
+1 0 0 0 0 0 0
+0 0 1 0 0 0 0
+0 0 1 0 0 0 0
+0 1 1 0 0 0 0
+Enter the cost matrix: 
+0 75 140 118 0 0 0
+75 0 0 0 0 0 71
+140 0 0 0 99 80 151
+118 0 0 0 0 0 0
+0 0 99 0 0 0 0
+0 0 80 0 0 0 0
+0 71 151 0 0 0 0
+Enter the source node 
+1
+
+
+output:
+
+path starts from starting point which is arad and then visits node 3 and distance travelled is 140 
+from there, next visits 6 which is at a distance of 80 
+Total distance travelled is 220 
+
+
