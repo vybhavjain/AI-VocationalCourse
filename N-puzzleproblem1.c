@@ -1,5 +1,5 @@
 //  N-PUZZLE PROBLEM LEVEL 1
-
+// using an arary representation
 int q[10],s[10],t[10];
 #include<stdio.h>
 
