@@ -14,3 +14,7 @@ N Puzzle is a sliding blocks game that takes place on a k * k grid with ((k * k)
 3) Vacuum cleaner world:
 
 In the simple world, the vacuum cleaner agent has a location sensor and a dirt sensor so that it knows where it is (room A or room B) and whether the room is dirty. It can go left, go right, suck, and idle.
+
+4) shortest distance:
+
+It is an applications of BFS to solve the arad traveling problem which is a problem that requires travelling to the city of Bucharest from Arad given the Straight Line Distance (SLD) of the various connecting cities in the shortest route available.
