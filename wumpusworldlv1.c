@@ -1,4 +1,5 @@
 //WUMPUS PROBLEM LEVEL1 
+// contents of each tile is known before hand i.e., if the tile is empty,or smelly,or has the gold,etc...
 
 #include<stdio.h>
 
@@ -6,10 +7,10 @@ int p[50];
 
 assign()
 	{
-		p[1]='s';
-		p[2]=' ';
-		p[3]=' ';
-	    p[4]=' ';
+	p[1]='s';
+	p[2]=' ';
+	p[3]=' ';
+        p[4]=' ';
         p[5]='b';
         p[6]=' ';
         p[7]='P';
@@ -37,8 +38,7 @@ assign()
         p[45]='P';
         p[46]=' ';
         p[47]='b';
-        p[48]=' ';
-        
+        p[48]=' ';    
 	}
 
 representation()
@@ -75,8 +75,7 @@ void main()
 		{
 			printf("enter l for turning left, r for turning right,f for moving forward in the facing direction,g for grabbing and s for shooting \n");
 			scanf("%c",&mov);
-			//printf("%c",mov);
-		    if(mov=='l')
+			if(mov=='l')
 			{
 				if(p[start]=='^')
 				 p[start]='<';
@@ -108,55 +107,31 @@ void main()
 				int temp1=start;
 				if(p[start]=='^')
 				{
-				  if(start==25)
+				  if(start==25||start==26||start==27||start==38)
 				  	printf("invalid move try again \n");
-				  else if(start==26)
-				  	printf("invalid move try again \n");
-				  else if(start==27)
-				  	printf("invalid move try again \n");
-				  else if(start==28)
-				  	printf("invalid move try again \n");	
 				  else
 				   start-=4;	
 				}
 				else if(p[start]=='<')
 				{
-				  if(start==25)
+				  if(start==25||start==29||start==33||start==37)
 				  	printf("invalid move try again \n");
-				  else if(start==29)
-				  	printf("invalid move try again \n");
-				  else if(start==33)
-				  	printf("invalid move try again \n");
-				  else if(start==37)
-				  	printf("invalid move try again \n");	
 				  else
 				   start-=1;
 				}
 				else if(p[start]=='v')
 				 {
-				  if(start==37)
+				  if(start==37||start==38||start==39||start==40)
 				  	printf("invalid move try again \n");
-				  else if(start==38)
-				  	printf("invalid move try again \n");
-				  else if(start==39)
-				  	printf("invalid move try again \n");
-				  else if(start==40)
-				  	printf("invalid move try again \n");	
 				  else
 				 	start+=4;
 				 }
 		 		else
 		 		{
-		 		  if(start==28)
-				  	printf("invalid move try again \n");
-				  else if(start==32)
-				  	printf("invalid move try again \n");
-				  else if(start==36)
-				  	printf("invalid move try again \n");
-				  else if(start==40)
-				  	printf("invalid move try again \n");	
+		 		  if(start==28||start==32||start==36||start==40)
+				   printf("invalid move try again \n");
 				  else
-		 		 start+=1;
+		 		   start+=1;
 		 		}
 		 		p[temp1]=' ';
 		 	    p[start]=temp;
@@ -222,19 +197,7 @@ void main()
 				point-=1000;
 				flag=1;
 			}
-			if(start==28) // 31,39
-			{
-				printf("Pit detected, you are dead!! \n ");
-				point-=1000;
-				flag=1;
-			}
-			if(start==31) // 31,39
-			{
-				printf("Pit detected, you are dead!! \n ");
-				point-=1000;
-				flag=1;
-			}
-			if(start==39) // 31,39
+			if(start==28||start==31||start==39) // 31,39
 			{
 				printf("Pit detected, you are dead!! \n ");
 				point-=1000;
@@ -243,7 +206,3 @@ void main()
 		}
 		printf(" your score is %d \n",point);
     }
-
-
-//left,right,forward,grab,shoot
-
