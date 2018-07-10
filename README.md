@@ -18,3 +18,4 @@ In the simple world, the vacuum cleaner agent has a location sensor and a dirt s
 4) shortest distance:
 
 It is an applications of BFS to solve the arad traveling problem which is a problem that requires travelling to the city of Bucharest from Arad given the Straight Line Distance (SLD) of the various connecting cities in the shortest route available.
+refer: Arad problem.pptx
