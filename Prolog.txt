@@ -1,0 +1,21 @@
+Data types
+Prolog's single data type is the term. Terms are either atoms, numbers, variables or compound terms.
+
+An atom is a general-purpose name with no inherent meaning. Examples of atoms include x, red, 'Taco', and 'some atom'.
+Numbers can be floats or integers. ISO standard compatible Prolog systems can check the Prolog flag "bounded". Most of the major Prolog systems support arbitrary length integer numbers.
+Variables are denoted by a string consisting of letters, numbers and underscore characters, and beginning with an upper-case letter or underscore. Variables closely resemble variables in logic in that they are placeholders for arbitrary terms.
+A compound term is composed of an atom called a "functor" and a number of "arguments", which are again terms. Compound terms are ordinarily written as a functor followed by a comma-separated list of argument terms, which is contained in parentheses. The number of arguments is called the term's arity. An atom can be regarded as a compound term with arity zero. An examples of compound terms is 'Person_Friends'(zelda,[tom,jim]).
+
+1) test1
+i/p
+:- initialization(main).
+main :- write('Hello World!').
+
+o/p
+Hello World!| ?- 
+
+Common operators:
+and   ,
+if  :-
+or 	;
+not NOT 
