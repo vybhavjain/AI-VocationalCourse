@@ -20,7 +20,7 @@ In the simple world, the vacuum cleaner agent has a location sensor and a dirt s
 It is an applications of BFS to solve the arad traveling problem which is a problem that requires travelling to the city of Bucharest from Arad given the Straight Line Distance (SLD) of the various connecting cities in the shortest route available.
 refer: Arad problem.pptx
 
-5)Partial Order Planning problem:
+5) Partial Order Planning problem:
 
 Create an agent that plans effectively in partial order planning and in dynamic environment.
 Example: wear tie , after wearing shoes, or wear tie, then goes for wearing tie, given time and objects  (shirt, shoes, socks) made to appear in order for specific time. 
