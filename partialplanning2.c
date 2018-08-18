@@ -28,12 +28,12 @@ void wearshirt()
 {
    	if(action[5]==0)
 	{
-   	 printf("\t \tshirt\n");
+   	 printf("\t wear shirt\n");
 	 action[5]=1;
 	}
 	if(action[5]==1)
 	{
-   	 printf("\t \ttwear tie\n");
+   	 printf("\t wear tie\n");
 	 action[6]=1;
 	 action[5]=2;  // to make sure if condition is not repeated.
 	}
@@ -44,12 +44,12 @@ void wearleftshoe()
 {
 	if(action[1]==1&&action[3]==0)
 	{
-	 printf("\t \tleft shoes\n");
+	 printf("\t left shoes\n");
 	 action[3]=1;
 	}
 	if(action[1]==0)
 	{
-	 printf("\t \tleft socks\n");
+	 printf("\t left socks\n");
 	 action[1]=1;
 	}
 
@@ -59,12 +59,12 @@ void wearrightshoe()
 {
 	if(action[2]==1&&action[4]==0)
 	{
-	 printf("\t \tright shoes\n");
+	 printf("\t right shoes\n");
 	 action[4]=1;
 	}
 	if(action[2]==0)
 	{
-	 printf("\t \tright socks\n");
+	 printf("\t right socks\n");
 	 action[2]=1;
 	}
 }
@@ -90,17 +90,20 @@ void callrandom(int t) // random
     	choose(num);
     	l++;
     }
-    printf("\t \t \t \t Hence the %d plan has been deliverd.\n \n ",t+1);
+    printf("Hence the %d plan has been deliverd.\n \n ",t+1);
 }
 
 void main()
 {
 	int t=0,i;
+	printf(" \t \t \t  FINAL PROJECT FOR ARTIFICIAL INTELLIGENCE AND ITS APPLICATIONS: \n \n ");
+	printf("An agent that plans effectively in partial order planning and in dynamic environment. \n \n");
 	printf("Enter the total number of plans you want: \n");
 	scanf("%d",&i);
+	printf("You will now be delivered %d random plans : \n \n",i);
 	for(t=0;t<i;t++)
 	{
-	 printf("\t \t \t \t The %d plan is:\n",t+1);
+	 printf("Plan number %d is: \n",t+1);
 	 callrandom(t);
 	}
 }
