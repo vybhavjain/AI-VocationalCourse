@@ -1,0 +1,106 @@
+// Project method 2
+
+//PROBLEM 3: Create an agent that plans effectively in partial order planning and in dynamic environment.
+//(Example: wear tie , after wearing shoes, or wear tie, then goes for wearing tie, given time and objects  (shirt, shoes, socks) made to appear in order for specific time. 
+
+ // create an array where each pos indicates if a particular task/function /action has been performed or not.
+
+ /*
+ array creation
+ array name: action[20]
+ index pos,action
+ 1. left sock on
+ 2.right sock on
+ 3.left shoe on
+ 4.right shoes on
+ 5.shirt is on
+ 6.tie is on
+*/
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int action[20];
+int i,t,k,j,n;
+void callrandom();
+
+void wearshirt()
+{
+   	if(action[5]==0)
+	{
+   	 printf("\t \tshirt\n");
+	 action[5]=1;
+	}
+	if(action[5]==1)
+	{
+   	 printf("\t \ttwear tie\n");
+	 action[6]=1;
+	 action[5]=2;  // to make sure if condition is not repeated.
+	}
+}
+
+
+void wearleftshoe()
+{
+	if(action[1]==1&&action[3]==0)
+	{
+	 printf("\t \tleft shoes\n");
+	 action[3]=1;
+	}
+	if(action[1]==0)
+	{
+	 printf("\t \tleft socks\n");
+	 action[1]=1;
+	}
+
+}
+
+void wearrightshoe()
+{
+	if(action[2]==1&&action[4]==0)
+	{
+	 printf("\t \tright shoes\n");
+	 action[4]=1;
+	}
+	if(action[2]==0)
+	{
+	 printf("\t \tright socks\n");
+	 action[2]=1;
+	}
+}
+
+void choose(int k)
+{
+	if(k==1)
+	wearshirt();
+	else if(k==2)
+	wearleftshoe();
+	else
+	wearrightshoe();
+}
+
+void callrandom(int t) // random
+{
+	int l=0;
+	for(j=0;j<=10;j++)
+		action[j]=0;
+    while(l!=100)
+    {
+    	int num = (rand() % 3) + 1;
+    	choose(num);
+    	l++;
+    }
+    printf("\t \t \t \t Hence the %d plan has been deliverd.\n \n ",t+1);
+}
+
+void main()
+{
+	int t=0,i;
+	printf("Enter the total number of plans you want: \n");
+	scanf("%d",&i);
+	for(t=0;t<i;t++)
+	{
+	 printf("\t \t \t \t The %d plan is:\n",t+1);
+	 callrandom(t);
+	}
+}
