@@ -23,4 +23,5 @@ refer: Arad problem.pptx
 5) Partial Order Planning problem:
 
 Create an agent that plans effectively in partial order planning and in dynamic environment.
-Example: wear tie , after wearing shoes, or wear tie, then goes for wearing tie, given time and objects  (shirt, shoes, socks) made to appear in order for specific time. 
+Example1: wear tie , after wearing shoes, or wear tie, then goes for wearing tie, given time and objects  (shirt, shoes, socks) made to appear in order for specific time. 
+Example2: Bake a cake.
