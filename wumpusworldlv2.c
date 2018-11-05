@@ -1,5 +1,5 @@
 //WUMPUS PROBLEM LEVEL 2
-
+// need  to correct end game for returing back to start
 #include<stdio.h>
 
 int p[50],shot=0;
