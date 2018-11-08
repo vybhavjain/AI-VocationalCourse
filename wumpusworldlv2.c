@@ -1,5 +1,4 @@
 //WUMPUS PROBLEM LEVEL 2
-// need  to correct end game for returing back to start
 #include<stdio.h>
 
 int p[50],shot=0;
@@ -163,9 +162,9 @@ representation() // function to recursively print all the squares/map
 
 void main()
         {
-            int flag =0,flag1,point=0;
+            int i,flag =0,flag1,point=0;
             char mov;
-            for(int i=0;i<50;i++)
+            for(i=0;i<50;i++)
             {
                 question[i]='?';
                 flag2[i]=1;
@@ -178,7 +177,7 @@ void main()
             while(flag!=1)
             {
                     printf("enter l for turning left, r for turning right,f for moving forward in the facing direction,g for grabbing and s for shooting \n");
-                    scanf("%c",&mov);
+                    scanf("%s",&mov);
                     if(mov=='l')
                     {
                         if(p[start]=='^')
@@ -191,8 +190,7 @@ void main()
                          p[start]='^';      
                         representation();
                     }
-
-                   if(mov=='r')
+                   else if(mov=='r')
                     {
                         if(p[start]=='^')
                          p[start]='>';
@@ -204,8 +202,7 @@ void main()
                          p[start]='v';      
                             representation();
                     }
-
-                   if(mov=='f')
+                   else if(mov=='f')
                     {
                             char temp=p[start];
                             int temp1=start;
@@ -247,8 +244,7 @@ void main()
                             point-=1;
                             representation();
                     }
-
-                   if(mov=='s')
+                   else if(mov=='s')
                     {
                             if(p[start]=='^'&&start==33)
                             {
@@ -284,14 +280,13 @@ void main()
                               point-=10;
                             }
                    }
-
-                   if(mov=='g')  // function to grab gold
+                   else if(mov=='g')  // function to grab gold
                     {
                             if(start==30)
                             {
                             point+=1000;
-                            printf("you have grabbed the gold congratulations,now go back to start \n");
-                            printf("or do you want to exit? press 1 for yes , 0 for no \n");
+                            printf("you have grabbed the gold congratulations \n");
+                            printf("Press 1 to exit \n");
                             scanf("%d",&flag1);
                             if(flag1==1)
                                     flag=1;
@@ -301,6 +296,10 @@ void main()
                             printf("nothing to grab here , try in another square \n");
                         }
                     }
+                    else
+                    {
+                    	printf("Please choose a valid option \n");
+					}
                     if(start==29&&p[9]=='W')  // interaction with Wumpus
                     {
                             printf("wumpus detected, you are dead!! \n ");
@@ -316,5 +315,3 @@ void main()
             }
             printf(" game over,your score is %d \n",point);
 }
-
-//left,right,forward,grab,shoot
